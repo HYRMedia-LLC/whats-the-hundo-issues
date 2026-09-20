@@ -1,0 +1,71 @@
+name: Report an issue
+description: Report a bug, information problem, event problem, or other product issue.
+title: "[Issue]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report an issue. Search existing issues before you submit this form.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Give a short description of the issue.
+      placeholder: Describe the problem in one sentence.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Explain what happened and when it happened.
+      placeholder: Include all information that can help us understand the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps that cause the issue.
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Describe what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: App, browser, or device information
+      description: Include the app version, operating system, browser, and device when they apply.
+      placeholder: Example: iOS 26.1 on iPhone 17, app version 1.2.0
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or other evidence
+      description: Add screenshots, screen recordings, links, dates, timezones, or other useful information.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: I searched the existing issues and did not find a duplicate.
+          required: true
+        - label: I removed passwords, account details, and other sensitive information.
+          required: true
